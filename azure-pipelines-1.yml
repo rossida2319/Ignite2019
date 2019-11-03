@@ -22,8 +22,7 @@ steps:
     restoreSolution: '$(solution)'
 - task: BatchScript@1
   inputs:
-    filename: 'src/PokerLeagueManager.UI.Web/'
-    arguments: 'BuildAngular.bat'
+    filename: '$(build.sourcesdirectory)/src/PokerLeagueManager.UI.Web/BuildAngular.bat'
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
